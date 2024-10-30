@@ -1,0 +1,128 @@
+/*********************************************************************************************************************
+*	Crop/Refine Popover -- For previewing image crops
+*********************************************************************************************************************/
+*[data-ui='popover-panel']{
+	position:fixed;
+	display:none;
+	top:50%;
+	left:50%;
+	z-index:9999;
+}
+.popover {
+	width:300px;
+	height:300px;
+	padding:15px 30px;
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:14px;
+	color:#555;
+	background: #eaeaea; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fefefe 0%, #eaeaea 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fefefe 0%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fefefe 0%,#eaeaea 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fefefe 0%,#eaeaea 100%); /* IE10+ */
+	background: linear-gradient(top,  #fefefe 0%,#eaeaea 100%); /* W3C */
+	border:1px solid #dbdbdb;
+	border-radius:3px;
+	box-shadow:0px 3px 30px 0px rgba(0,0,0,0.3);
+	z-index: 999999;
+}
+div#popover p {
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+div#popover-preview {
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	top: 10px;
+	bottom: 40px;
+}
+/*********************************************************************************************************************
+*	Crop/Refine Modal
+*********************************************************************************************************************/
+#modal-cropper #sizes .preview {
+	cursor: pointer;
+	float: none;
+}
+#modal-cropper #sizes small {
+	display: block;
+	line-height: 7px;
+	color: #444;
+	font-size: 9.5px;
+}
+#modal-cropper #sizes td.missing,
+#modal-cropper #sizes td.missing a, 
+#modal-cropper span.missing {
+	color: #B74327;
+}
+#modal-cropper th.actions {
+	width: 150px;
+}
+#cropperimage img {
+	opacity: 0;
+}
+
+#modal-cropper .media-modal-close {
+	text-decoration: none;
+	text-align: center;
+}
+#modal-cropper .media-modal-close .media-modal-icon:before {
+	line-height: 2.25;
+}
+/*********************************************************************************************************************
+*	Crop/Refine -- Landing Page
+*********************************************************************************************************************/
+#croprefine-administration .instructions {
+	display: flex;
+}
+#croprefine-administration .instructions > div {
+	margin-right: 1rem;
+	line-height: 1.75;
+}
+#croprefine-administration .instructions .dashicons-before {
+	display: inline;
+}
+#croprefine-administration div.notice-nopad {
+	margin:0;
+}
+/*********************************************************************************************************************
+*	For the kind of heart, a donation form
+*********************************************************************************************************************/
+#croprefine-administration #croprefinefooter div.footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 30px;
+	border: 1px solid #DDD;
+	background-color: #FFF;
+	border-radius: 3px;
+	padding: 10px;
+}
+#croprefine-administration #croprefinefooter div.footer > div {
+	flex-grow: 1;
+	flex-basis: 0;
+	margin-top: 12px;
+}
+#croprefine-administration #croprefinefooter div.footer > div > a > img {
+	margin: 10px 0;
+}
+#croprefine-administration #croprefinefooter div.footer p {
+	font-size: 11px;
+	max-width: 90%;
+}
+#croprefine-administration #croprefinefooter div.donate {
+	display:none;
+}
+#croprefine-administration footer small {
+	text-transform: uppercase;
+	font-style: normal;
+	font-size: 9px;
+	letter-spacing: 1px;
+}
+#croprefine-administration footer small a {
+	font-weight: bold;
+}
